@@ -52,11 +52,27 @@ const memberships = ref<(IMembership)[]>([
   {
     name: 'Basic',
     price: 2,
-    description: 'For starters',
-    benefits: ['Fame', 'Fortune', 'Hair'],
+    description: 'For starters and people who love tech',
+    benefits: ['Fame', 'Fortune', 'Hair', 'ROI', 'Money'],
+    href: '/memberships',
+
+  }, {
+    name: 'Premium',
+    price: 40,
+    description: 'For starters and people appasioned for tech ',
+    benefits: ['Fame', 'Fortune', 'Hair', 'ROI', 'Money'],
     href: '/memberships',
 
   },
+  {
+    name: 'Pro',
+    price: 200,
+    description: 'For starters and hobbyists appasioned for tech',
+    benefits: ['Fame', 'Fortune', 'Hair', 'ROI', 'Money'],
+    href: '/memberships',
+
+  },
+
 ])
 const showLogin = ref<boolean>(false)
 const showRegister = ref<boolean>(false)
