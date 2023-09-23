@@ -7,9 +7,7 @@ const router = useRouter()
 
 <template>
   <div w-full flex items-center justify-between gap-4 bg-white px-4 py-2 text-gray-500>
-    <NButton text @click="router.push('/')">
-      <img :src="logo" h-12 alt="Company Logo">
-    </NButton>
+    <AppLogo />
     <NInput
       class="hidden max-w-[300px] lg:block"
       placeholder="Buscar"

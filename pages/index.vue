@@ -2,12 +2,13 @@
 import { NButton, NCard, NCarousel, NPageHeader } from 'naive-ui'
 import type { ICourse } from '~/interfaces/ICourse'
 import type { IMembership } from '~/interfaces/IMembership'
+import type { ICategory } from '~/interfaces/ICategory'
 import type { IReview } from '~/interfaces/IReview'
 
 import HomeLayout from '~/layouts/home.vue'
 
 const router = useRouter()
-const categories = ref<any>([{
+const categories = ref<(ICategory)[]>([{
   title: 'Finanzas',
   image: 'https://files.cults3d.com/uploaders/15529773/illustration-file/fc1c0ead-195b-426e-b2f3-46d7ee150a80/s-l400.jpg',
   href: '/courses',
@@ -75,7 +76,6 @@ const memberships = ref<(IMembership)[]>([
   },
 
 ])
-
 const reviews = ref<(IReview)[]> ([
   {
     name: 'John Doe',
@@ -107,6 +107,7 @@ const reviews = ref<(IReview)[]> ([
     ,
   },
 ])
+
 const showLogin = ref<boolean>(false)
 const showRegister = ref<boolean>(false)
 
