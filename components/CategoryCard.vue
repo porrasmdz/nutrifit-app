@@ -14,7 +14,7 @@ const router = useRouter()
   <NCard
     :title="title"
     hoverable
-    class="h-70 w-70 cursor-pointer lg:w-full active:scale-95 hover:scale-105 hover:bg-gray-200"
+    class="h-70 w-70 cursor-pointer overflow-hidden rounded-lg lg:w-full active:scale-95 hover:scale-105 hover:bg-gray-200"
     @click="router.push(href)"
   >
     <template #cover>

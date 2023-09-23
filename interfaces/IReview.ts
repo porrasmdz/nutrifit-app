@@ -1,4 +1,6 @@
-export interface IReview {
+import type { BaseModel } from './BaseModel'
+
+export interface IReview extends Partial<BaseModel> {
   name: string
   role: string
   image: string

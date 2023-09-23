@@ -7,7 +7,7 @@
   <slot name="hero" />
 
   <main
-    class="relative overflow-x-hidden px-10 py-20 text-center"
+    class="relative min-h-90vh overflow-x-hidden px-10 py-20 text-center"
   >
     <slot />
   </main>

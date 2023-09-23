@@ -1,34 +1,25 @@
-import { acceptHMRUpdate, defineStore } from 'pinia'
+import { storeToRefs } from 'pinia'
+import type { CreateUserDto, FindUserDto, UpdateUserDto } from '~/interfaces/dtos/user'
+import { useUserStore } from '~/stores/user'
 
-export const useUserStore = defineStore('user', () => {
-  /**
-   * Current named of the user.
-   */
-  const savedName = ref('')
-  const previousNames = ref(new Set<string>())
+function useUser() {
+  const userStore = useUserStore()
+  const { user, loading } = storeToRefs(userStore)
 
-  const usedNames = computed(() => Array.from(previousNames.value))
-  const otherNames = computed(() => usedNames.value.filter(name => name !== savedName.value))
-
-  /**
-   * Changes the current name of the user and saves the one that was used
-   * before.
-   *
-   * @param name - new name to set
-   */
-  function setNewName(name: string) {
-    if (savedName.value)
-      previousNames.value.add(savedName.value)
-
-    savedName.value = name
-  }
+  const findUser = async (dto: FindUserDto) => {}
+  const createUser = async (payload: CreateUserDto) => {}
+  const updateUser = async (id: string | number, payload: UpdateUserDto) => {}
+  const deleteUser = async (id: string | number) => {}
 
   return {
-    setNewName,
-    otherNames,
-    savedName,
-  }
-})
+    user,
+    loading,
 
-if (import.meta.hot)
-  import.meta.hot.accept(acceptHMRUpdate(useUserStore, import.meta.hot))
+    // (functions)
+    findUser,
+    createUser,
+    updateUser,
+    deleteUser,
+  }
+}
+export default useUser
