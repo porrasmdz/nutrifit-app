@@ -1,2 +1,2 @@
-export const appName = 'Lexi'
-export const appDescription = 'La más innovadora plataforma de capacitación y networking del mundo'
+export const appName = 'Nutrifit'
+export const appDescription = 'Slogan'

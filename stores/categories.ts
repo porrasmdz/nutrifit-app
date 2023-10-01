@@ -35,7 +35,7 @@ export const useCategoriesStore = defineStore('categories', () => {
   }])
   const loading = ref<boolean>(false)
   const limit = ref<number>(10)
-  const totalResults = ref<number>(0)
+  const totalResults = ref<number>(categories.value.length)
   const nextPage = ref<number | null>(null)
   const prevPage = ref<number | null>(null)
 

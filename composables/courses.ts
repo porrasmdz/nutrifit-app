@@ -1,5 +1,5 @@
 import { storeToRefs } from 'pinia'
-import { useCoursesStore } from '~/stores/courses'
+import { allCourses, useCoursesStore } from '~/stores/courses'
 import type { CreateCourseDto, FindCourseDto, UpdateCourseDto } from '~/interfaces/dtos/course'
 
 function useCourses() {
@@ -9,7 +9,12 @@ function useCourses() {
   const getAllCourses = async () => {
     coursesStore.loadCourses()
   }
-  const findCourses = async (dto: FindCourseDto) => {}
+  const findCourses = async (dto: FindCourseDto) => {
+    getAllCourses()
+    courses.value = courses.value.filter(course =>
+      course.href.includes(dto.href ?? ''),
+    )
+  }
   const createCourses = async (payload: CreateCourseDto) => {}
   const updateCourses = async (id: string | number, payload: UpdateCourseDto) => {}
   const deleteCourses = async (id: string | number) => {}
@@ -23,7 +28,8 @@ function useCourses() {
     prevPage,
 
     // (functions)
-
+    getAllCourses,
+    findCourses,
   }
 }
 export default useCourses
