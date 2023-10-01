@@ -1,3 +1,4 @@
+/* eslint-disable n/prefer-global/process */
 import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
 
@@ -9,6 +10,25 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
   ],
+  build: {
+    transpile:
+      process.env.NODE_ENV === 'production'
+        ? [
+            'naive-ui',
+            'vueuc',
+            '@css-render/vue3-ssr',
+            '@juggle/resize-observer',
+          ]
+        : ['@juggle/resize-observer'],
+  },
+  vite: {
+    optimizeDeps: {
+      include:
+        process.env.NODE_ENV === 'development'
+          ? ['naive-ui', 'vueuc', 'date-fns-tz/esm/formatInTimeZone']
+          : [],
+    },
+  },
 
   experimental: {
     // when using generate, payload js assets included in sw precache manifest

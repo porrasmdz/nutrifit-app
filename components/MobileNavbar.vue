@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import naive from 'naive-ui'
+import { NAvatar, NButton } from 'naive-ui'
 
-const { NAvatar, NButton } = naive
 const route = useRoute()
 </script>
 

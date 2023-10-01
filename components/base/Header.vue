@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import naive from 'naive-ui'
+import { NButton, NInput } from 'naive-ui'
 
-const { NButton, NInput } = naive
 const title = inject('title')
 </script>
 

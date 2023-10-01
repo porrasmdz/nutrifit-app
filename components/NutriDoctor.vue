@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import naive from 'naive-ui'
+import { NAvatar, NBadge, NButton } from 'naive-ui'
 
-const { NAvatar, NBadge, NButton } = naive
 const router = useRouter()
 const images = [
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5I3X-3wgFxWp9rIsQ2YiZrcEEBL5rGXxmql_-aZW3WRrdSzmVYNPILKiaoUA4T7gvx34&usqp=CAU',
