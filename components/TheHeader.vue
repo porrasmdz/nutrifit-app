@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { NButton, NInput, NInputGroup } from 'naive-ui'
+import naive from 'naive-ui'
 import logo from '~/assets/logohorizontal.png'
 
+const { NButton, NInput, NInputGroup } = naive
 const router = useRouter()
 </script>
 

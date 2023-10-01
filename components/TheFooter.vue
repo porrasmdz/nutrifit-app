@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { NButton } from 'naive-ui'
+import naive from 'naive-ui'
+
+const { NButton } = naive
 </script>
 
 <template>

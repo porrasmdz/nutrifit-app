@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { NButton, NCard, NCarousel, NPageHeader } from 'naive-ui'
 import type { ICourse } from '~/interfaces/ICourse'
 import type { IMembership } from '~/interfaces/IMembership'
 import type { ICategory } from '~/interfaces/ICategory'
@@ -20,10 +19,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-8">
+  <div class="flex flex-col gap-8 px-4">
     <div>
-      <h1 class="text-2xl font-bold">
-        Los más recientes
+      <h1 class="text-2xl font-medium">
+        Actividad reciente
       </h1>
       <div class="no-scrollbar flex gap-6 overflow-x-scroll pt-6">
         <NutriAvatar />
@@ -37,7 +36,7 @@ onMounted(() => {
       </div>
     </div>
     <div>
-      <h1 class="text-2xl font-bold">
+      <h1 class="text-2xl font-medium">
         Nutricionistas
       </h1>
       <div class="no-scrollbar flex flex-col gap-6 overflow-scroll pt-6">

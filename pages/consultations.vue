@@ -7,7 +7,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <h1 class="mb-4 text-2xl font-bold">
+  <h1 class="mb-4 text-2xl font-medium">
     Consultas Próximas
   </h1>
   <p>Aqui calculadora...</p>

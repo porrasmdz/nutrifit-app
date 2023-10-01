@@ -8,7 +8,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <h1 class="mb-4 text-2xl font-bold">
+    <h1 class="mb-4 text-2xl font-medium">
       Calculadora de Macronutrientes
     </h1>
     <p>Aqui calculadora...</p>
